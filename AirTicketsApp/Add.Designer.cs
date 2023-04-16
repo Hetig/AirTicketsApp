@@ -28,21 +28,22 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			dateTimePicker1 = new DateTimePicker();
+			dateTimePicker = new DateTimePicker();
 			addButton = new Button();
 			label3 = new Label();
-			textBox3 = new TextBox();
+			namesTextBox = new TextBox();
 			label2 = new Label();
 			label1 = new Label();
-			textBox2 = new TextBox();
+			flightNumberTextBox = new TextBox();
 			SuspendLayout();
 			// 
-			// dateTimePicker1
+			// dateTimePicker
 			// 
-			dateTimePicker1.Location = new Point(231, 89);
-			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(338, 27);
-			dateTimePicker1.TabIndex = 14;
+			dateTimePicker.Format = DateTimePickerFormat.Time;
+			dateTimePicker.Location = new Point(231, 89);
+			dateTimePicker.Name = "dateTimePicker";
+			dateTimePicker.Size = new Size(338, 27);
+			dateTimePicker.TabIndex = 14;
 			// 
 			// addButton
 			// 
@@ -52,6 +53,7 @@
 			addButton.TabIndex = 13;
 			addButton.Text = "Добавить";
 			addButton.UseVisualStyleBackColor = true;
+			addButton.Click += addButton_Click;
 			// 
 			// label3
 			// 
@@ -62,12 +64,12 @@
 			label3.TabIndex = 12;
 			label3.Text = "Укажите ФИО пассажиров";
 			// 
-			// textBox3
+			// namesTextBox
 			// 
-			textBox3.Location = new Point(231, 300);
-			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(338, 27);
-			textBox3.TabIndex = 11;
+			namesTextBox.Location = new Point(231, 300);
+			namesTextBox.Name = "namesTextBox";
+			namesTextBox.Size = new Size(338, 27);
+			namesTextBox.TabIndex = 11;
 			// 
 			// label2
 			// 
@@ -87,25 +89,25 @@
 			label1.TabIndex = 9;
 			label1.Text = "Укажите время вылета";
 			// 
-			// textBox2
+			// flightNumberTextBox
 			// 
-			textBox2.Location = new Point(231, 186);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(338, 27);
-			textBox2.TabIndex = 8;
+			flightNumberTextBox.Location = new Point(231, 186);
+			flightNumberTextBox.Name = "flightNumberTextBox";
+			flightNumberTextBox.Size = new Size(338, 27);
+			flightNumberTextBox.TabIndex = 8;
 			// 
 			// Add
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Controls.Add(dateTimePicker1);
+			Controls.Add(dateTimePicker);
 			Controls.Add(addButton);
 			Controls.Add(label3);
-			Controls.Add(textBox3);
+			Controls.Add(namesTextBox);
 			Controls.Add(label2);
 			Controls.Add(label1);
-			Controls.Add(textBox2);
+			Controls.Add(flightNumberTextBox);
 			Name = "Add";
 			Text = "Add";
 			ResumeLayout(false);
@@ -114,12 +116,12 @@
 
 		#endregion
 
-		private DateTimePicker dateTimePicker1;
+		private DateTimePicker dateTimePicker;
 		private Button addButton;
 		private Label label3;
-		private TextBox textBox3;
+		private TextBox namesTextBox;
 		private Label label2;
 		private Label label1;
-		private TextBox textBox2;
+		private TextBox flightNumberTextBox;
 	}
 }

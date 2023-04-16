@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AirTicketsApp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace AirTicketsApp
 		public Add()
 		{
 			InitializeComponent();
+		}
+
+		private void addButton_Click(object sender, EventArgs e)
+		{
+			var airTicket = new AirTicket(dateTimePicker.Value, flightNumberTextBox.Text, namesTextBox.Text);
+
+			TicketsStorage.Add(airTicket);
+			MessageBox.Show("Билет успешно добавлен");
 		}
 	}
 }
